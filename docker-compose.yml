@@ -2,6 +2,7 @@ services:
   docker-engine-mcp:
     image: docker-engine-mcp:latest
     build:
+      # Update context path to match your local clone location
       context: /home/lbolsen/Projects/docker-engine-mcp
     environment:
       - PORTAINER_URL=${PORTAINER_URL}
