@@ -1,0 +1,11 @@
+services:
+  docker-engine-mcp:
+    image: docker-engine-mcp:latest
+    build:
+      context: .
+    environment:
+      - PORTAINER_URL=${PORTAINER_URL}
+      - PORTAINER_API_KEY=${PORTAINER_API_KEY}
+      - MCP_PORT=3003
+    network_mode: host
+    restart: unless-stopped
