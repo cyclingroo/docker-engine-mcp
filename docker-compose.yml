@@ -2,10 +2,10 @@ services:
   docker-engine-mcp:
     image: docker-engine-mcp:latest
     build:
-      context: .
+      context: /home/lbolsen/Projects/docker-engine-mcp
     environment:
       - PORTAINER_URL=${PORTAINER_URL}
       - PORTAINER_API_KEY=${PORTAINER_API_KEY}
-      - MCP_PORT=3003
+      - MCP_PORT=${MCP_PORT}
     network_mode: host
     restart: unless-stopped
